@@ -32,6 +32,7 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html",
     }),
+    require("postcss-nested"),
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
