@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
+// TODO: Split DEV/PROD webpack configs
 module.exports = {
   module: {
     rules: [
@@ -15,14 +16,13 @@ module.exports = {
         test: /\.css$/,
         use: [
           "style-loader",
-          { loader: "css-loader", options: {} },
           {
-            loader: "postcss-loader",
+            loader: "css-loader",
             options: {
-              ident: "postcss",
-              plugins: [require("autoprefixer")],
+              importLoaders: 1,
             },
           },
+          "postcss-loader",
         ],
       },
     ],
@@ -32,7 +32,6 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html",
     }),
-    require("postcss-nested"),
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
