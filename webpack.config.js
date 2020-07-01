@@ -3,10 +3,15 @@ const path = require("path");
 
 // TODO: Split DEV/PROD webpack configs
 module.exports = {
+  devtool: "source-map",
+
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        resolve: {
+          extensions: [".js", ".jsx"],
+        },
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -25,8 +30,17 @@ module.exports = {
           "postcss-loader",
         ],
       },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack", "url-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: ["file-loader"],
+      },
     ],
   },
+
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
