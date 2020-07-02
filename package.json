@@ -4,9 +4,13 @@
   "description": "A customer feedback page for checkout.com technical test",
   "main": "index.js",
   "scripts": {
-    "test": "yarn test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "prebuild": "",
+    "build": "webpack --mode production",
+    "lint": ""
   },
   "browserslist": [
     "> 1%",
@@ -21,6 +25,19 @@
   "bugs": {
     "url": "https://github.com/AlfieDarko/checkout-technical-test/issues"
   },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-enzyme"
+    ],
+    "setupFiles": [
+      "./src/setupTests.js"
+    ],
+    "testEnvironment": "enzyme",
+    "moduleNameMapper": {
+      "^.+\\.js$": "babel-jest",
+      "\\.(css)$": "identity-obj-proxy"
+    }
+  },
   "homepage": "https://github.com/AlfieDarko/checkout-technical-test#readme",
   "devDependencies": {
     "@babel/core": "7.10.3",
@@ -28,12 +45,20 @@
     "@babel/preset-env": "7.10.3",
     "@babel/preset-react": "7.10.1",
     "@svgr/webpack": "5.4.0",
+    "@testing-library/jest-dom": "5.11.0",
     "autoprefixer": "9.8.2",
     "babel-loader": "8.1.0",
     "css-loader": "3.6.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
     "file-loader": "6.0.0",
     "html-loader": "1.1.0",
     "html-webpack-plugin": "4.3.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "26.1.0",
+    "jest-environment-enzyme": "7.1.2",
+    "jest-enzyme": "7.1.2",
+    "jest-transform-stub": "2.0.0",
     "postcss-loader": "3.0.0",
     "postcss-nested": "4.2.1",
     "postcss-preset-env": "6.7.0",
@@ -47,6 +72,7 @@
     "@babel/runtime": "7.10.3",
     "axios": "0.19.2",
     "classnames": "2.2.6",
+    "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hook-form": "5.7.2",
