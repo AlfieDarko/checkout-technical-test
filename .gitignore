@@ -1,5 +1,7 @@
 node_modules
 dist
 settings.json
-.DS_Store
+DS_Store
 coverage
+scratchpad
+.DS_Store
