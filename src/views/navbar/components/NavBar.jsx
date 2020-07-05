@@ -1,44 +1,32 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { locales } from "../../lib/locales";
 import "./styles.css";
+import NavigationList from "./NavigationList";
+import NavigationItem from "./NavigationItem";
 
 const NavBar = () => {
   const language = locales["NAVBAR"];
   return (
-    <nav className="navbar">
-      <ul className="navbar__ul">
-        <li className="navbar__item">
-          <a
-            className="navbar__anchor-tag"
-            data-qa="navbar-home-link"
-            href={language.HOME.URL}
-          >
-            {language.HOME.TEXT}
-          </a>
-        </li>
-
-        <li className="navbar__item">
-          <a
-            className="navbar__anchor-tag"
-            data-qa="navbar-comments-link"
-            href={language.COMMENTS.URL}
-          >
-            {language.COMMENTS.TEXT}
-          </a>
-        </li>
-
-        <li className="navbar__item">
-          <a
-            data-qa="navbar-github-link"
-            className="navbar__anchor-tag"
-            href={language.GITHUB_REPO.URL}
-            target="_blank"
-          >
-            {language.GITHUB_REPO.TEXT}
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <NavigationList>
+      <NavigationItem href={language.HOME.URL} dataTestId="navbar-link-home">
+        {language.HOME.TEXT}
+      </NavigationItem>
+      <NavigationItem
+        href={language.COMMENTS.URL}
+        dataTestId="navbar-link-comments"
+      >
+        {language.COMMENTS.TEXT}
+      </NavigationItem>
+      <NavigationItem
+        href={language.GITHUB_REPO.URL}
+        dataTestId="navbar-link-github"
+        target="_blank"
+      >
+        {language.GITHUB_REPO.TEXT}
+      </NavigationItem>
+    </NavigationList>
   );
 };
 
