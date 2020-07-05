@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import PizzaSrc from "#assets/optimized-pizza.jpeg";
-import { locales } from "#views/lib/locales";
+import PizzaSrc from "../../../assets/Optimized-pizza.jpeg";
 
+import { locales } from "#views/lib/locales";
 import "./styles.css";
 
 const language = locales["PIZZA_VIEW"];
