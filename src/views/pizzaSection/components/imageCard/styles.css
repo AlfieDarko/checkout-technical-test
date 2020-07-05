@@ -1,0 +1,39 @@
+.image-card {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: var(--default-text-color);
+    background: var(--col-offdark);
+    width: 100vw;
+
+    /* mob first */
+    @media only screen and (min-width: 640px) {
+      padding: 16px;
+      width: inherit;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    margin-bottom: 32px;
+    border-radius: 10px;
+  }
+
+  &__title {
+    font-size: 48px;
+    color: var(--col-offdark-form);
+    margin: 0 0 1em 0;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 18px;
+    padding: 16px;
+    text-align: center;
+
+    margin: 8px;
+    background: rgba(18, 18, 18, 0.05);
+    border-radius: 10px;
+  }
+}
