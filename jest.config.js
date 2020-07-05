@@ -23,6 +23,7 @@ module.exports = {
     __dirname, // the root directory
   ],
 
+  testPathIgnorePatterns: ["<rootDir>/node_modules"],
   // The test environment that will be used for testing
   testEnvironment: "jest-environment-jsdom-sixteen",
 
