@@ -1,19 +1,10 @@
-/* eslint-disable */
 const path = require("path");
-const webpack = require("webpack");
-const merge = require("webpack-merge");
-
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 
 const APP_DIR = path.resolve(__dirname, "./src/index.js");
-// PLATFORM === "production"
-// ? MiniCssExtractPlugin.loader
-// :
+
 module.exports = {
   devtool: "cheap-module-eval-source-map",
-
   entry: [APP_DIR],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
@@ -71,18 +62,4 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html",
     }),
-    // new webpack.DefinePlugin({
-    //   "process.env.VERSION": JSON.stringify(env.VERSION),
-    //   "process.env.PLATFORM": JSON.stringify(env.PLATFORM),
-    // }),
-    // new CopyPlugin({
-    //   patterns: [{ from: "src/views/assets", to: "dist/assets" }],
-    // }),
-  ],
-  // output: {
-  //   filename: '[name].bundle.js',
-  //   chunkFilename: '[name].chunk.bundle.js',
-  //   path: path.resolve(__dirname, '..', 'dist'),
-  //   publicPath: '/',
-  // },
 };

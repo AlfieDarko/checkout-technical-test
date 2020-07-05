@@ -7,9 +7,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "start": "webpack-dev-server --mode development --hot --history-api-fallback --open --config webpack.base.config.js --env.PLATFORM=local",
+    "start": "webpack-dev-server --mode development --hot --history-api-fallback --open --config webpack.base.config.js",
     "prebuild": "",
-    "build": " webpack --mode production --env.NODE_ENV=production --config webpack.prod.config.js  --progress",
+    "build": " webpack --mode production --config webpack.prod.config.js  --progress",
     "lint": ""
   },
   "browserslist": [
