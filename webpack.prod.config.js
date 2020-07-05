@@ -62,7 +62,7 @@ module.exports = {
         use: ["@svgr/webpack", "url-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         use: ["file-loader"],
       },
     ],
