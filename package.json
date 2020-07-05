@@ -34,6 +34,7 @@
     ],
     "testEnvironment": "enzyme",
     "moduleNameMapper": {
+      "^#views(.*)$": "<rootDir>/src/views/$1",
       "^.+\\.js$": "babel-jest",
       "\\.(css)$": "identity-obj-proxy"
     }
@@ -46,8 +47,10 @@
     "@babel/preset-react": "7.10.1",
     "@svgr/webpack": "5.4.0",
     "@testing-library/jest-dom": "5.11.0",
+    "@testing-library/react": "10.4.3",
     "autoprefixer": "9.8.2",
     "babel-loader": "8.1.0",
+    "babel-plugin-module-resolver": "4.0.0",
     "css-loader": "3.6.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
@@ -57,6 +60,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "26.1.0",
     "jest-environment-enzyme": "7.1.2",
+    "jest-environment-jsdom-sixteen": "1.0.3",
     "jest-enzyme": "7.1.2",
     "jest-transform-stub": "2.0.0",
     "postcss-loader": "3.0.0",
