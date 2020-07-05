@@ -1,6 +1,3 @@
-// For a detailed explanation regarding each configuration property, visit:
-// https://jestjs.io/docs/en/configuration.html
-
 module.exports = {
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
@@ -18,20 +15,22 @@ module.exports = {
     "\\.(png|webp|jpg|jpeg|gif)$": "<rootDir>/__mocks__/fileMock.js",
     "\\.(svg)$": "<rootDir>/__mocks__/svgMock.js",
   },
-  // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: ["<rootDir>/enzyme.config.js"],
+
+  moduleDirectories: [
+    "node_modules",
+    // add the directory with the test-utils.js file, for example:
+    "test-utils", // a utility folder
+    __dirname, // the root directory
+  ],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: "jest-environment-jsdom-sixteen",
 
   // The glob patterns Jest uses to detect test files
   testMatch: ["**/__tests__/**/*.js?(x)", "**/?(*.)+(spec|test).js?(x)"],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   testPathIgnorePatterns: ["\\\\node_modules\\\\"],
-
-  // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
-  testURL: "http://localhost",
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: ["<rootDir>/node_modules/"],

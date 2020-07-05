@@ -5,6 +5,17 @@
       {
         "regenerator": true
       }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "#views": "./src/views/",
+          "#assets": "./src/views/assets/",
+          "#context": "./src/context/"
+        }
+      }
     ]
   ],
 

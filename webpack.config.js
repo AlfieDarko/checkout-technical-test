@@ -4,7 +4,14 @@ const path = require("path");
 // TODO: Split DEV/PROD webpack configs
 module.exports = {
   devtool: "source-map",
-
+  resolve: {
+    alias: {
+      "#views": path.resolve(__dirname, "src/views/"),
+      "#assets": path.resolve(__dirname, "src/views/assets/"),
+      "#context": path.resolve(__dirname, "src/context/"),
+    },
+    extensions: [".js", ".jsx", ".jpg", ".jpeg", ".gif", ".svg"],
+  },
   module: {
     rules: [
       {
