@@ -35,6 +35,8 @@
     "testEnvironment": "enzyme",
     "moduleNameMapper": {
       "^#views(.*)$": "<rootDir>/src/views/$1",
+      "^#assets(.*)$": "<rootDir>/src/views/assets/$1",
+      "^#context(.*)$": "<rootDir>/src/context/$1",
       "^.+\\.js$": "babel-jest",
       "\\.(css)$": "identity-obj-proxy"
     }
