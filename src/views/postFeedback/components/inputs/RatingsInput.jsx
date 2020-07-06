@@ -1,5 +1,5 @@
 import React from "react";
-import { locales } from "../../../../lib/locales";
+import { locales } from "#views/lib/locales";
 import InfoMessage from "../InfoMessage";
 
 import PropTypes from "prop-types";
@@ -8,14 +8,14 @@ const RatingsInput = ({ register, formErrors }) => {
   const language = locales["POST_FEEDBACK"];
 
   return (
-    <div className="customer-feedback__field-container">
-      <label className="customer-feedback__label" htmlFor="form-rating">
+    <div className="form-field__container">
+      <label className="form-field__label" htmlFor="form-rating">
         {language.RATING.FORM_LABEL}
       </label>
       <input
         min={1}
         max={5}
-        className="customer-feedback__input"
+        className="form-field__input"
         type="number"
         id="form-rating"
         ref={register({

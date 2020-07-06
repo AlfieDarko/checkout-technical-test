@@ -1,17 +1,18 @@
 import React from "react";
-import { locales } from "../../../../lib/locales";
+import { locales } from "#views/lib/locales";
 import PropTypes from "prop-types";
 import InfoMessage from "../InfoMessage";
+import "./styles.css";
 
 const NameInput = ({ register, formErrors }) => {
   const language = locales["POST_FEEDBACK"];
   return (
-    <div className="customer-feedback__field-container">
-      <label className="customer-feedback__label" htmlFor="form-name">
+    <div className="form-field__container">
+      <label className="form-field__label" htmlFor="form-name">
         {language.NAME.FORM_LABEL}
       </label>
       <input
-        className="customer-feedback__input"
+        className="form-field__input"
         placeholder={language.NAME.PLACEHOLDER}
         type="text"
         name="name"

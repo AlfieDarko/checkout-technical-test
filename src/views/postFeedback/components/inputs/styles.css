@@ -1,0 +1,38 @@
+.form-field {
+  &__container {
+    display: flex;
+    margin: 1em 0;
+    flex-direction: column;
+  }
+
+  &__label {
+    width: 100px;
+    padding-right: 4px;
+    margin-bottom: 4px;
+    font-weight: 550;
+  }
+
+  &__input,
+  &__textarea {
+    transition-duration: 1s;
+
+    flex: 1 1 auto;
+    padding: 16px;
+    border: 1px solid #4b576673;
+    border-radius: 5px;
+    padding-left: 8px;
+    color: #535d6a;
+  }
+
+  &__input:hover,
+  &__textarea:hover {
+    border: 1px solid #2b2727;
+    transition-duration: 1s;
+    box-shadow: 10px 10px 39px -25px rgba(0, 0, 0, 0.75);
+  }
+
+  &__input:focus,
+  &__textarea:focus {
+    transition-duration: 0.2s;
+  }
+}

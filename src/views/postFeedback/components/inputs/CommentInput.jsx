@@ -1,18 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import InfoMessage from "../InfoMessage";
-import { locales } from "../../../../lib/locales";
+import { locales } from "#views/lib/locales";
+import "./styles.css";
 
 const CommentInput = ({ register, formErrors }) => {
   const language = locales["POST_FEEDBACK"];
 
   return (
-    <div className="customer-feedback__field-container">
-      <label className="customer-feedback__label" htmlFor="form-comment">
+    <div className="form-field__container">
+      <label className="form-field__label" htmlFor="form-comment">
         {language.COMMENT.FORM_LABEL}
       </label>
       <textarea
-        className="customer-feedback__textarea"
+        className="form-field__textarea"
         type="text"
         placeholder={language.COMMENT.PLACEHOLDER}
         id="form-comment"
