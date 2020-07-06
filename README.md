@@ -6,9 +6,9 @@ Hosted URL: **https://tinyurl.com/cko-tech-test**
 
 ## Screenshots
 
-<a href="https://ibb.co/0KpCQgN">Mob Screen</a> |
+| <a href="https://ibb.co/hyy3Rx2">Desktop Screen</a> |
 <a href="https://ibb.co/wM6QXpF">Tablet Screen</a> |
-<a href="https://ibb.co/hyy3Rx2">Desktop Screen</a>
+<a href="https://ibb.co/0KpCQgN">Mob Screen</a> |
 
 ## Prerequisites
 
