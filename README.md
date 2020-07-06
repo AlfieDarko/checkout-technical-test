@@ -2,65 +2,142 @@
 
 Checkout.com Frontend Technical Test
 
+Hosted URL: **https://tinyurl.com/cko-tech-test**
+
+## Screenshots
+
 ## Prerequisites
+
+- NPM (or Yarn)
+
+- [Node](https://nodejs.org)
+- [NPM](https://www.npmjs.com/)
+
+Or alternatively, you can install Yarn instead of NPM
+
+- [Yarn](https://yarnpkg.com/)
 
 ## Installing
 
+After making sure you have all the **prerequisites** above,
+
+- Open your command line or terminal app
+- Run the respective command below to install the app locally
+
+**NPM users:**
+`npm install`
+
+**Yarn users:**
+`yarn`
+
 ## Running Tests
 
-### Unit Tests
+**To run the unit & integration tests:**
+**NPM:**
+`npm run test`
 
-### Automation Tests
+**Yarn:**
+`npm test`
+
+**To run the linter:**
+**NPM:**
+`npm run lint`
+
+Yarn:
+`yarn lint`
+
+**To run the automation tests:**
+**NPM:**
+`npm run automation`
+
+**Yarn:**
+`yarn automation`
 
 ## Built With
 
-## Thoughts
+**Javascript
+React
+PostCSS
+Jest
+React Testing Library
+Sheety.co**
+
+## Technology choices
+
+**Javascript**
+I chose this over typescript as for the purposes of a technical test, alongside the descriptions of propTypes in the code, this was sufficient enough to tackle the task at hand.
+
+**React**
+Since the job role advertised is for react based frontend development, I found it fitting to use React rather than vanilla JS for this technical test.
+
+**PostCSS**
+Most may have reached for SASS but I felt I wanted to be pragmatic and only bring in what I needed. SASS has useful tools like CSS imports, mixins and their own style of CSS variables off the bat but I only really would use the nested CSS syntax.
+
+I like PostCSS for the fact that it starts bare bones and then you can just bring in the parts that you actually need.
+If this were a bigger more complicated project, I would have thought about SASS & Styled Components especially, which I really enjoy working on and would have really aided the component based development approach.
+
+In the end, I mostly took the hammer for the nail approach with the technology choices .
+
+**React Testing Library**
+I've always been interested in giving it a spin and enjoy a lot of Kent C Dodds content about testing so I thought let me give this a try for this project.
+Due to the limited time I had, I wasn't able to use this to its full extent but the experience was positive.
+There are some interesting differences between this and enzyme for example which would be great to discuss.
+
+**Sheety.co**
+Google sheets to Rest API.
+I mostly use this for rapid prototyping when I don't have the leisure of time to spin up a backend & database.
+There was a case to use Firebase instead as there are the web security issues that come with using something like Sheety but given this is a technical test for a frontend role, I felt that it was appropriate to use this as long as the position is explained.
+
+I'm 100% aware of the security implication of unauthenticated endpoints from Sheety will raise flags in production development but for a technical test & the issues acknowledged with the time constraints, the tradeoff was worth it.
+
+**No Redux or MobX??**
+Since this is a small project, I felt it was a bit overkill to bring in an outside package when React has all the tools to manage application state on the small scale.
+
+I felt it was perfectly appropriate to use the [React Context pattern of state management](https://medium.com/swlh/the-comprehensive-8pt-grid-guide-aa16ff402179) & it was pleasant to use!
+
+At a previous time I would have reached for the state management tools most react developers are comfortable with ie. Redux but I'm taking the pragmatic approach and only using what is necessary for the task at hand!
 
 ## If I Had More Time
 
--> Chart - Recharts
+There are a few things I wasn't able to complete due to time constraints and balancing my time between other tech-tests and interviews. I've written up about them below.
 
--> More Testing - 1st time using react-testing-library - usually use jest / enzyme but I like to challenge mysef in tech tests by considering alternate technology
+**ReCharts**
+I would have been able to implement the chart part of the site, tallying the ratings from 1-5 stars.
+I would have used [ReCharts](http://recharts.org/en-US/) based on React & D3. I quite like its customisable API & I've used it before for more simpler charts.
 
--> Use Star Selection as rating input - would have been more visually appealing - Ran out of time - Could have stole the one from uber's Base.web design system
+**Testing**
+I would have loved to do more testing. Especially more integration and end-to-end with Cypress. I was quite pressed for time so I done what I can on this side of things.
 
--> Styled Components - Took a pragmatic approach. Since it was a small project, I only used what I needed.
-A few times when dealing iwth styling logic I thought things may have been cleaner with styled components, esp when taking a reusable approach to component design.
+**Star Selection as a rating input**
+I felt it would have been way more visually appealing than my current implementation & would have been something to implement had I more time.
+I quite like the one from [uber's design system base web](https://baseweb.design/components/rating/) (link).
+As someone who enjoys component library work, this would have been fun to work on!
 
--> postcss vs sass - Only really needed css nesting sytnax so opted for postcss as it comes bare bones and you only include what you need. Not really any advanced CSS going on that I would need mixins etc. CSS variables are widely supported now too so using postcss meant I just brought in packages & features that are actually needed. Hammer for a nail not gun for a nail.
+**Data endpoints**
+Would have probably thought about moving away from using sheety.co if I weren't pressed for time (dont judge me 😂) to an express & mongo (or even some google cloud functions or lambda's for quick iterations)
 
---> DB > Firebase instead of sheety.co - I enjoy sheety.co for quick prototyping but setting up cloud functions would have been abit more fitting & shown proficiency in setting up APIs & working with the cloud etc.
-If I had more time I would have went down that route.
+**Performance Enhancements**
+Lazy Loading only load the comments when in screen.
+Perhaps think about a load or see comments button instead of instantly displaying them.
 
--> Perf enhancements. Lazy Loading only load the comments when in screen. Perhaps a load comments button instead of instantly displaying them.
+I would have thought about utilizing data pagination from the endpoint to either allow the user to click a button and see more reviews, or just have an infinite scroll that loads the next ten or so more as we scroll down.
 
--> If I was to develop this further, I would think about the user experience of having a 100 reviews. I'd perhaps implement pagination on the FE or maybe an infinite scroll type view with the reviews. This saves the user bandwith as we wont have to load up 100+ comments at once.
+Currently all the items are called from the API which is definitely not the most performant when it comes to the user's perspective.
 
--> CSS Animations & Interactions
+This would have been enjoyable to implement, I'd probably do it in my own time to play around with how I can improve the experience by buffering the results.
 
-- Definitely felt I could have done more on this front to add a more pleasant user experience and demonstrate css animation & interaction knowledge
+**CSS Animations & Interactions**
 
--> Utility Classes, CSS Variable, CSS @Imports,
+-Definitely felt I could have done more on this front to add a more interactive user experience & also to have fun playing around with CSS animations & user interaction knowledge
 
-- React Context for state management.
-- Didn't need react / redux in this case as it was a small project. I think its important to select the right tools for the job and handling state with reacts context, reducer etc. was enough.
-- In production apps redux may have been the best choice but its always wise to evaluate the tools you use for what job.
-- A project bigger than this, I would have reached for redux
+**CSS Organization:**
+
+Utility Classes, CSS Variable, CSS @Imports,
+I would have utilised more utility classes and organise my CSS a bit better.  
+It would be useful to have a Utility Class file with a readme and description of what is available, the naming system etc. These are always useful when developing with CSS using BEM. Things like setting specific margins, setting the display to flex etc. are repeated a lot in all the codebases I've seen.
+
+I would have loved to have done the same with the CSS variables, esp in tokenising them I've seen in design systems at work at other companies with mature design. Organising the [8pt spacing system](https://medium.com/swlh/the-comprehensive-8pt-grid-guide-aa16ff402179) into css variables like var(--space-2xl) = 32px for example.. would have made it easier to make a nice visually conforming website
 
 ## Acknowledgements
 
-TODO: HTML5 & ALLY ✅
-TODO: Styling ✅
-TODO: propTypes ✅
-TODO: Code Coverage ✅
-TODO: Do Tests ✅
-TODO: Alias for context / assets / etc. ✅
-TODO: Dev & Prod webpack builds
-
-TODO: Do Cleanups (Code & Tests)
-TODO: Write Readme
-TODO: Deploy to Github & GCP
-TODO: Quick Google Functions Backend? (Non Auth/ post & get )
-
-TODO: 'https://eu.ui-avatars.com/api/?name=John'
-TODO: Remove Enzyme Stuff ✅
+Thanks to the checkout.com team for this opportunity & making it to the end of the README!
