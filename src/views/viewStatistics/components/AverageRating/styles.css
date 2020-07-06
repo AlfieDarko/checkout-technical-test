@@ -1,0 +1,21 @@
+.average-rating {
+  margin-top: 150px;
+  @media only screen and (min-width: 640px) {
+    margin-top: 300px;
+  }
+  &__value {
+    color: black;
+    font-size: 64px;
+    background: #ffd601;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 100%;
+    padding: 16px;
+  }
+
+  &__text {
+    color: #fed601;
+    text-align: center;
+    margin: 8px;
+  }
+}

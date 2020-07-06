@@ -1,8 +1,7 @@
 import React from "react";
 import AverageRating from "./AverageRating";
-import { render, fireEvent, screen } from "../../../../../test-utils";
 import "@testing-library/jest-dom/extend-expect";
-// import { render, fireEvent, waitFor, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 describe("<Average Rating>", () => {
   it("should find the AverageRating & its correct contents when there is no reviews ", () => {

@@ -1,18 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./styles.css";
 
 const renderReviewContent = (numberOfReviews, averageRating) => {
   return (
     <div data-testid="average-rating-review-content">
-      <p className="list-feedback__subtitle">Average Rating of</p>
-      <h2
-        className="list-feedback__avg-rating"
-        data-testid="average-rating-count"
-      >
+      <p className="average-rating__text">Average Rating of</p>
+      {/* change h2 to p */}
+      <h2 className="average-rating__value" data-testid="average-rating-count">
         {numberOfReviews && `${averageRating}`}
       </h2>
 
-      <p className="list-feedback__subtitle" data-testid="reviews-count">
+      <p className="average-rating__text" data-testid="reviews-count">
         {`from ${numberOfReviews} reviews`}
       </p>
     </div>
@@ -22,6 +21,7 @@ const renderReviewContent = (numberOfReviews, averageRating) => {
 const renderZeroReviewContent = () => {
   return (
     <>
+      {/* change h2 to p */}
       <h2 data-testid="average-rating-no-reviews-text">
         There are no reviews at the moment
       </h2>
