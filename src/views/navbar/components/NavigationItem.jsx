@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 
 import "./styles.css";
 
-const NavigationItem = ({ href, children, dataTestId, target }) => {
+const NavigationItem = ({
+  href,
+  children,
+  dataTestId,
+  target,
+  isNoReferrer,
+}) => {
   return (
     <li className="navbar__item">
       <a
@@ -11,6 +17,7 @@ const NavigationItem = ({ href, children, dataTestId, target }) => {
         href={href}
         target={target}
         data-testid={dataTestId}
+        rel={isNoReferrer && "noreferrer"}
       >
         {children}
       </a>
