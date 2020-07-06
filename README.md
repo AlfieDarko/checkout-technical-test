@@ -136,7 +136,7 @@ This would have been enjoyable to implement, I'd probably do it in my own time t
 
 **CSS Organization:**
 
-Utility Classes, CSS Variable, CSS @Imports,
+More Utility Classes, More CSS Variables, CSS @Imports,
 I would have utilised more utility classes and organise my CSS a bit better.  
 It would be useful to have a Utility Class file with a readme and description of what is available, the naming system etc. These are always useful when developing with CSS using BEM. Things like setting specific margins, setting the display to flex etc. are repeated a lot in all the codebases I've seen.
 
