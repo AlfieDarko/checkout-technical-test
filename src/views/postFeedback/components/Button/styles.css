@@ -1,0 +1,26 @@
+.btn {
+  width: 100%;
+  padding: 16px;
+  background: #9e1946;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+
+  &--green,
+  &--green:hover {
+    background: green;
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    background: slategray;
+  }
+
+  &:hover,
+  &:focus {
+    transition-duration: 0.4s;
+
+    background: #d52561;
+  }
+}
