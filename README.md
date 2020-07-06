@@ -2,7 +2,7 @@
 
 Checkout.com Frontend Technical Test
 
-Hosted URL: **https://tinyurl.com/cko-tech-test**
+Hosted URL: **https://agitated-curie-ce3034.netlify.app/**
 
 ## Screenshots
 
