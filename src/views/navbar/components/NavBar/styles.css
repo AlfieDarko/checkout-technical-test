@@ -11,12 +11,7 @@
   }
 
   &__item {
-    &:hover {
-      transition-duration: 0.2s;
-      background: rgba(18, 18, 18, 0.05);
-      border-radius: 5px;
-    }
-
+    &:hover,
     &:focus {
       transition-duration: 0.2s;
       background: rgba(18, 18, 18, 0.05);

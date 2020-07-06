@@ -1,0 +1,27 @@
+.navigation-item {
+  &__li {
+    &:hover,
+    &:focus {
+      transition-duration: 0.2s;
+      background: rgba(18, 18, 18, 0.05);
+      border-radius: 5px;
+    }
+  }
+
+  &__anchor-tag {
+    display: block;
+    padding: 16px;
+    color: var(--col-offdark);
+    font-weight: 600;
+
+    &:link {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      background: rgba(18, 18, 18, 0.05);
+    }
+  }
+}

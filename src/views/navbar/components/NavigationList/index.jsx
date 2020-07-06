@@ -5,8 +5,8 @@ import "./styles.css";
 
 const NavigationList = ({ children }) => {
   return (
-    <nav data-testid="navigation-list" className="navbar">
-      <ul className="navbar__ul">{children}</ul>
+    <nav data-testid="navigation-list" className="navigation-list">
+      <ul className="navigation-list__ul">{children}</ul>
     </nav>
   );
 };

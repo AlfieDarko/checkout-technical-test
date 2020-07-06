@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationItem from "./NavigationItem";
+import NavigationItem from "./index";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 

@@ -1,16 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
-
-import { locales } from "../../lib/locales";
-import "./styles.css";
-import NavigationList from "./NavigationList";
-import NavigationItem from "./NavigationItem";
+import NavigationList from "../NavigationList";
+import NavigationItem from "../NavigationItem";
+import { locales } from "../../../lib/locales";
 
 const NavBar = () => {
   const language = locales["NAVBAR"];
   return (
     <NavigationList>
-      <NavigationItem href={language.HOME.URL} dataTestId="navbar-link-home">
+      <NavigationItem
+        href={language.HOME.URL}
+        dataTestId="navbar-link-home"
+        isNoReferrer
+      >
         {language.HOME.TEXT}
       </NavigationItem>
       <NavigationItem

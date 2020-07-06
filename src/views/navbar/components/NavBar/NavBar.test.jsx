@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "./index";
 import React from "react";
 
 import { locales } from "#views/lib/locales";

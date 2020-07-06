@@ -1,0 +1,12 @@
+.navigation-list {
+  display: flex;
+  justify-content: center;
+  background: var(--col-cheesy-yellow);
+  padding-bottom: 128px;
+
+  &__ul {
+    display: inherit;
+    list-style: none;
+    padding: 0;
+  }
+}

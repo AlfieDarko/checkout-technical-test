@@ -11,9 +11,9 @@ const NavigationItem = ({
   isNoReferrer,
 }) => {
   return (
-    <li className="navbar__item">
+    <li className="navigation-item__li">
       <a
-        className="navbar__anchor-tag"
+        className="navigation-item__anchor-tag"
         href={href}
         target={target}
         data-testid={dataTestId}
@@ -30,6 +30,7 @@ NavigationItem.propTypes = {
   children: PropTypes.node.isRequired,
   dataTestId: PropTypes.string.isRequired,
   target: PropTypes.string,
+  isNoReferrer: PropTypes.bool,
 };
 
 export default NavigationItem;
