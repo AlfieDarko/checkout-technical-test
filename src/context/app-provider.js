@@ -1,4 +1,6 @@
 import React, { useReducer } from "react";
+import PropTypes from "prop-types";
+
 import {
   CommentsFormStateContext,
   CommentsFormDispatchContext,
@@ -33,4 +35,8 @@ export const AppProvider = ({ children }) => {
       </CommentsListDispatchContext.Provider>
     </CommentsListStateContext.Provider>
   );
+};
+
+AppProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

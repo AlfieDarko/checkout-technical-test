@@ -12,5 +12,4 @@ export const selectAverageRatingsFromState = (state) => {
     numberOfReviews;
 
   if (averageReviews) return Math.round(averageReviews * 1e1) / 1e1;
-  // no type coercion needed
 };

@@ -18,7 +18,7 @@ const commentsListReducer = (state, action) => {
 
     case actionTypes.GET_COMMENTS_FAILURE:
       return {
-        ...commentsList,
+        ...state,
         isLoading: false,
         isError: true,
         error: action.error,
