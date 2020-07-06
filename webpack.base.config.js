@@ -31,8 +31,6 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        exclude: "/node_modules/",
-
         use: [
           "style-loader",
           {
@@ -43,12 +41,12 @@ module.exports = {
           },
           "postcss-loader",
         ],
+        exclude: "/node_modules/",
       },
       {
-        exclude: "/node_modules/",
-
         test: /\.svg$/,
         use: ["@svgr/webpack", "url-loader"],
+        exclude: "/node_modules/",
       },
       {
         exclude: "/node_modules/",
