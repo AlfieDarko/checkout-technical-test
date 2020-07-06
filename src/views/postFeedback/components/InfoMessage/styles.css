@@ -1,0 +1,18 @@
+.info-message {
+  &__span {
+    padding-top: 8px;
+    font-size: 16px;
+
+    &--yellow {
+      color: #f9b200;
+    }
+
+    &--green {
+      color: #00dc53;
+    }
+
+    &--red {
+      color: #ff2d2d;
+    }
+  }
+}
