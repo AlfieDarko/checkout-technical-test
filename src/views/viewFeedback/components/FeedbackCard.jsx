@@ -9,7 +9,7 @@ const FeedbackCard = ({ item }) => {
       <div>
         <img
           className="feedback-card__image"
-          src={imageSrc}
+          src={imageSrc ?? DefaultProfilePic}
           alt={`Picture of ${name}`}
         />
       </div>
@@ -43,10 +43,6 @@ FeedbackCard.propTypes = {
     /* Profile picture used by the user */
     imageSrc: PropTypes.string,
   }),
-};
-
-FeedbackCard.defaultProps = {
-  imageSrc: DefaultProfilePic,
 };
 
 export default FeedbackCard;
