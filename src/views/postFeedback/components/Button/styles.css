@@ -20,7 +20,6 @@
   &:hover,
   &:focus {
     transition-duration: 0.4s;
-
     background: #d52561;
   }
 }

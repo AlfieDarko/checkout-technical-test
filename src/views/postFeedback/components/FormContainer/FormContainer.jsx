@@ -6,9 +6,10 @@ import FeedbackForm from "../FeedbackForm";
 
 const FormContainer = () => {
   const commentsFormState = useCommentsFormState();
+
   const commentsFormDispatch = useCommentsFormDispatch();
   const { handleSubmit, register, errors } = useForm();
-  const { state, error, isLoading } = commentsFormState;
+  const { status, error, isLoading } = commentsFormState;
 
   const onSubmit = async (userInput) => {
     event.preventDefault();
@@ -22,7 +23,7 @@ const FormContainer = () => {
         handleSubmit={handleSubmit}
         register={register}
         formErrors={errors}
-        asyncStatus={state}
+        asyncStatus={status}
         formAsyncError={error}
         isLoading={isLoading}
       />
