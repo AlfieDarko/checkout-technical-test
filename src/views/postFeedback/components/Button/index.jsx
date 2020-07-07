@@ -1,18 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import cx from "classnames";
 import "./styles.css";
 
-const Button = ({ children, isLoading, isDisabled, isSuccess, dataTestId }) => {
+const Button = ({ children, isDisabled, isSuccess, dataTestId }) => {
   const getButtonClassNames = () =>
     cx(
       "center",
-      { btn: !isLoading && !isDisabled },
+      { btn: !isSuccess && !isDisabled },
       {
         "btn btn--green": isSuccess,
       },
-      { "btn btn--disabled": isLoading }
+      { "btn btn--disabled": isDisabled }
     );
 
   return (
@@ -29,7 +28,6 @@ const Button = ({ children, isLoading, isDisabled, isSuccess, dataTestId }) => {
 
 Button.propTypes = {
   children: PropTypes.node,
-  isLoading: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isSuccess: PropTypes.bool,
   dataTestId: PropTypes.string.isRequired,

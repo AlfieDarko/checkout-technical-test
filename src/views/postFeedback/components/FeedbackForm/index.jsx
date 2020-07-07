@@ -51,7 +51,6 @@ const FeedbackForm = ({
           dataTestId="feedback-form-submit-btn"
           isDisabled={isLoadingOrIsSuccess}
           isSuccess={isAsyncSuccessful}
-          isLoading={isLoading}
         >
           {renderButtonContent()}
         </Button>
