@@ -56,23 +56,23 @@ Yarn:
 
 ## Build
 
-**To run the build script with linting & tests: **
+**To run the build script with linting & tests:**
 
-••NPM: ••
+**NPM:**
 
 `npm run build`
 
-••Yarn: \*\*
+**Yarn:**
 
 `yarn build`
 
-**To run the build script only: **
+**To run the build script only:**
 
-••NPM: ••
+**NPM:**
 
 `npm run deploy`
 
-••Yarn: \*\*
+**Yarn:**
 
 `yarn deploy`
 
@@ -80,13 +80,13 @@ Yarn:
 
 - **Javascript**
 - **React**
-- **PostCSS**
-- **React-Form-Hooks**
-- **Jest**
-- **React Testing Library**
-- **Webpack**
-- **Sheety.co**
-- **Netlify**
+- [**PostCSS**](https://postcss.org/)
+- [**React-Form-Hooks**](https://react-hook-form.com/)
+- [**Jest**](https://jestjs.io/en/)
+- [**React Testing Library**](https://testing-library.com/)
+- [**Webpack**](https://webpack.js.org/)
+- [**Sheety.co**](https://sheety.co)
+- [**Netlify**](https://netlify.com)
 
 ## Technology choices
 
