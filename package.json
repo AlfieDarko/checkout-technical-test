@@ -10,7 +10,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "start": "webpack-dev-server --mode development --hot --history-api-fallback --open --config webpack.base.config.js",
-    "build": "npm run lint && npm run test && webpack --mode production --config webpack.prod.config.js  --progress"
+    "build": "npm run lint && npm run test && webpack --mode production --config webpack.prod.config.js  --progress",
+    "deploy": "webpack --mode production --config webpack.prod.config.js  --progress"
   },
   "browserslist": [
     "> 1%",
