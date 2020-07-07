@@ -55,9 +55,12 @@ Yarn:
 **Javascript**
 **React**
 **PostCSS**
+**React-Form-Hooks**
 **Jest**
 **React Testing Library**
+**Webpack**
 **Sheety.co**
+**Netlify**
 
 ## Technology choices
 
@@ -86,6 +89,9 @@ I mostly use this for rapid prototyping when I don't have the leisure of time to
 There was a case to use Firebase instead as there are the web security issues that come with using something like Sheety but given this is a technical test for a frontend role, I felt that it was appropriate to use this as long as the position is explained.
 
 I'm 100% aware of the security implication of unauthenticated endpoints from Sheety will raise flags in production development but for a technical test & the issues acknowledged with the time constraints, the tradeoff was worth it.
+
+**React Form Hooks**
+I've used React Form Hooks to handle the form validation and workings. I felt the API was simpler than something like Formik & it was capable of handling a small form for this tech test.
 
 **No Redux or MobX??**
 Since this is a small project, I felt it was a bit overkill to bring in an outside package when React has all the tools to manage application state on the small scale.
@@ -148,6 +154,10 @@ It would also be easy for more junior deevlopers to jump in the codebase and fee
 **Commit Hooks:**
 I could have added some commit hook scripts to lint and run tests on each commit in order to force people to commit working code only. I like that it enforces a code standard and only commiting working code throughout the team.
 I've seen implementing this reduce the more obvious bugs
+
+**Form Input Validation**
+I would have went in and done some more form validation, esp for things like minimum and max inputs.
+Could I have had a swearword filter or used some npm plugin?
 
 ## Acknowledgements
 
