@@ -23,7 +23,7 @@
   animation: 1.5s linear infinite spinner;
   animation-play-state: inherit;
   border: solid 3px #dedede;
-  border-bottom-color: #ef6565;
+  border-bottom-color: #fed501;
   border-radius: 50%;
   content: "";
   height: 40px;

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import LoadingSpinner from "#views/loadingSpinner";
 import "./styles.css";
 
 const renderReviewContent = (numberOfReviews, averageRating) => {
@@ -29,7 +30,7 @@ const renderZeroReviewContent = () => {
   );
 };
 
-const AverageRating = ({ numberOfReviews, averageRating }) => {
+const AverageRating = ({ numberOfReviews, averageRating, isLoading }) => {
   const ariaLabelWithReviews = `This Pizza has an average rating of ${averageRating} from ${numberOfReviews} reviews`;
   const ariaLabelNoReviews = `There are no reviews at the moment`;
   const isReviewsPresent = numberOfReviews > 0;
@@ -40,8 +41,11 @@ const AverageRating = ({ numberOfReviews, averageRating }) => {
       tabIndex="0"
       aria-label={isReviewsPresent ? ariaLabelWithReviews : ariaLabelNoReviews}
     >
-      {isReviewsPresent && renderReviewContent(numberOfReviews, averageRating)}
-      {!isReviewsPresent && renderZeroReviewContent()}
+      {isLoading && <LoadingSpinner />}
+      {isReviewsPresent &&
+        !isLoading &&
+        renderReviewContent(numberOfReviews, averageRating)}
+      {!isReviewsPresent && !isLoading && renderZeroReviewContent()}
     </div>
   );
 };

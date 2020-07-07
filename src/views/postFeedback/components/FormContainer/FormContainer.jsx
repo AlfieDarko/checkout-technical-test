@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useCommentsFormState, useCommentsFormDispatch } from "#context";
 import { postComment } from "#context";
 import FeedbackForm from "../FeedbackForm";
-import "./styles.css";
+
 const FormContainer = () => {
   const commentsFormState = useCommentsFormState();
   const commentsFormDispatch = useCommentsFormDispatch();

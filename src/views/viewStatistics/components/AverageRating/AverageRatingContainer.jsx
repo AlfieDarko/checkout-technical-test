@@ -14,9 +14,8 @@ const AverageRatingContainer = () => {
   const commentsListDispatch = useCommentsListDispatch();
 
   const averageRating = selectAverageRatingsFromState(commentsListState);
-  const { feedback } = commentsListState;
+  const { feedback, isLoading } = commentsListState;
   const numberOfReviews = feedback?.length;
-
   useEffect(() => {
     getAllComments(commentsListDispatch);
   }, [commentsFormState.status]);
@@ -24,6 +23,7 @@ const AverageRatingContainer = () => {
   return (
     <>
       <AverageRating
+        isLoading={isLoading}
         numberOfReviews={numberOfReviews}
         averageRating={averageRating}
       />
