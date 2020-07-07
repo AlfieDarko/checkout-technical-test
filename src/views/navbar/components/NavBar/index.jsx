@@ -7,11 +7,7 @@ const NavBar = () => {
   const language = locales["NAVBAR"];
   return (
     <NavigationList>
-      <NavigationItem
-        href={language.HOME.URL}
-        dataTestId="navbar-link-home"
-        isNoReferrer
-      >
+      <NavigationItem href={language.HOME.URL} dataTestId="navbar-link-home">
         {language.HOME.TEXT}
       </NavigationItem>
       <NavigationItem
@@ -24,6 +20,7 @@ const NavBar = () => {
         href={language.GITHUB_REPO.URL}
         dataTestId="navbar-link-github"
         target="_blank"
+        isNoReferrer
       >
         {language.GITHUB_REPO.TEXT}
       </NavigationItem>
