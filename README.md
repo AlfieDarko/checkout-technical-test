@@ -2,7 +2,7 @@
 
 Checkout.com Frontend Technical Test
 
-Hosted URL: **https://agitated-curie-ce3034.netlify.app/**
+[Hosted URL: https://agitated-curie-ce3034.netlify.app/](https://agitated-curie-ce3034.netlify.app/)
 
 ## Screenshots
 
