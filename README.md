@@ -4,6 +4,10 @@ Checkout.com Frontend Technical Test
 
 [Hosted URL: https://agitated-curie-ce3034.netlify.app/](https://agitated-curie-ce3034.netlify.app/)
 
+## Task
+
+The task was to build a simple page where you can post a comment and view the comments posted.
+
 ## Screenshots
 
 | <a href="https://ibb.co/hyy3Rx2">Desktop Screen</a> |
@@ -50,27 +54,52 @@ After making sure you have all the **prerequisites** above,
 Yarn:
 `yarn lint`
 
+## Build
+
+**To run the build script with linting & tests: **
+
+••NPM: ••
+
+`npm run build`
+
+••Yarn: \*\*
+
+`yarn build`
+
+**To run the build script only: **
+
+••NPM: ••
+
+`npm run deploy`
+
+••Yarn: \*\*
+
+`yarn deploy`
+
 ## Built With
 
-**Javascript**
-**React**
-**PostCSS**
-**React-Form-Hooks**
-**Jest**
-**React Testing Library**
-**Webpack**
-**Sheety.co**
-**Netlify**
+- **Javascript**
+- **React**
+- **PostCSS**
+- **React-Form-Hooks**
+- **Jest**
+- **React Testing Library**
+- **Webpack**
+- **Sheety.co**
+- **Netlify**
 
 ## Technology choices
 
-**Javascript**
+### Javascript
+
 I chose this over typescript as for the purposes of a technical test, alongside the descriptions of propTypes in the code, this was sufficient enough to tackle the task at hand.
 
-**React**
+### **React**
+
 Since the job role advertised is for react based frontend development, I found it fitting to use React rather than vanilla JS for this technical test.
 
-**PostCSS**
+### **PostCSS**
+
 Most may have reached for SASS but I felt I wanted to be pragmatic and only bring in what I needed. SASS has useful tools like CSS imports, mixins and their own style of CSS variables off the bat but I only really would use the nested CSS syntax.
 
 I like PostCSS for the fact that it starts bare bones and then you can just bring in the parts that you actually need.
@@ -78,22 +107,26 @@ If this were a bigger more complicated project, I would have thought about SASS 
 
 In the end, I mostly took the hammer for the nail approach with the technology choices .
 
-**React Testing Library**
+### **React Testing Library**
+
 I've always been interested in giving it a spin and enjoy a lot of Kent C Dodds content about testing so I thought let me give this a try for this project.
 Due to the limited time I had, I wasn't able to use this to its full extent but the experience was positive.
 There are some interesting differences between this and enzyme for example which would be great to discuss.
 
-**Sheety.co**
+### **Sheety.co**
+
 Google sheets to Rest API.
 I mostly use this for rapid prototyping when I don't have the leisure of time to spin up a backend & database.
 There was a case to use Firebase instead as there are the web security issues that come with using something like Sheety but given this is a technical test for a frontend role, I felt that it was appropriate to use this as long as the position is explained.
 
 I'm 100% aware of the security implication of unauthenticated endpoints from Sheety will raise flags in production development but for a technical test & the issues acknowledged with the time constraints, the tradeoff was worth it.
 
-**React Form Hooks**
+### **React Form Hooks**
+
 I've used React Form Hooks to handle the form validation and workings. I felt the API was simpler than something like Formik & it was capable of handling a small form for this tech test.
 
-**No Redux or MobX??**
+### **No Redux or MobX??**
+
 Since this is a small project, I felt it was a bit overkill to bring in an outside package when React has all the tools to manage application state on the small scale.
 
 I felt it was perfectly appropriate to use the [React Context pattern of state management](https://kentcdodds.com/blog/how-to-use-react-context-effectively/) & it was pleasant to use!
@@ -104,24 +137,28 @@ At a previous time I would have reached for the state management tools most reac
 
 There are a few things I wasn't able to complete due to time constraints and balancing my time between other tech-tests and interviews. I've written up about them below.
 
-**ReCharts**
+###**ReCharts**
 I would have been able to implement the chart part of the site, tallying the ratings from 1-5 stars.
 I would have used [ReCharts](http://recharts.org/en-US/) based on React & D3. I quite like its customisable API & I've used it before for more simpler charts.
 
-**Testing**
+### **Testing**
+
 I would have loved to do more testing. Especially more integration and end-to-end with Cypress. I was quite pressed for time so I done what I can on this side of things.
 
 Perhaps even bring in Storybook for any reusable components I have like Buttons, Form Inputs and infoMessages. That could be overkill for this small task but it gives developers an opportunity to display a reusable component in its use context, visually.
 
-**Star Selection as a rating input**
+### **Star Selection as a rating input**
+
 I felt it would have been way more visually appealing than my current implementation of inputting the value & would have been something I would have implemented had I more time.
 I quite like the one from [uber's design system base web](https://baseweb.design/components/rating/) (link).
 As someone who enjoys component library work, this would have been fun to work on!
 
-**Data endpoints**
+### **Data endpoints**
+
 Would have probably thought about moving away from using sheety.co if I weren't pressed for time (dont judge me 😂) to an express & mongo (or even some google cloud functions or lambda's for quick iterations).
 
-**Performance Enhancements**
+### **Performance Enhancements**
+
 Lazy Loading only load the comments when in screen.
 Perhaps think about a load or see comments button instead of instantly displaying them.
 
@@ -131,16 +168,17 @@ Currently all the items are called from the API which is definitely not the most
 
 This would have been enjoyable to implement, I'd probably do it in my own time to play around with how I can improve the experience by buffering the results.
 
-**Skeleton Loading:**
+### **Skeleton Loading:**
+
 Would have been awesome to have some skeleton loading in the beginning so I could create an effect of a seamless loading experience.
 
 I could have the images transition in from a blue or just a skeleton bg and have the same with the reviews below.
 
-**CSS Animations & Interactions**
+### **CSS Animations & Interactions**
 
 -Definitely felt I could have done more on this front to add a more interactive user experience & also to have fun playing around with CSS animations & user interaction knowledge
 
-**CSS Organization:**
+### **CSS Organization:**
 
 More Utility Classes, More CSS Variables, CSS @Imports,
 I would have utilised more utility classes and organise my CSS a bit better.  
@@ -151,11 +189,13 @@ Organising the [8pt spacing system](https://medium.com/swlh/the-comprehensive-8p
 
 It would also be easy for more junior deevlopers to jump in the codebase and feel at ease about making spacing changes as there is a TSHIRT sizing structure to adhere to in terms of spacing, font sizes etc.
 
-**Commit Hooks:**
+### **Commit Hooks:**
+
 I could have added some commit hook scripts to lint and run tests on each commit in order to force people to commit working code only. I like that it enforces a code standard and only commiting working code throughout the team.
 I've seen implementing this reduce the more obvious bugs
 
-**Form Input Validation**
+### **Form Input Validation**
+
 I would have went in and done some more form validation, esp for things like minimum and max inputs.
 Could I have had a swearword filter or used some npm plugin?
 
