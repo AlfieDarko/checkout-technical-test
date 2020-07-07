@@ -34,7 +34,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  isLoading: false,
   isDisabled: false,
   isSuccess: false,
 };
