@@ -52,12 +52,12 @@ Yarn:
 
 ## Built With
 
-**Javascript
-React
-PostCSS
-Jest
-React Testing Library
-Sheety.co**
+**Javascript**
+**React**
+**PostCSS**
+**Jest**
+**React Testing Library**
+**Sheety.co**
 
 ## Technology choices
 
