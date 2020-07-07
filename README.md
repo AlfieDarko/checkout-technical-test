@@ -36,26 +36,19 @@ After making sure you have all the **prerequisites** above,
 
 ## Running Tests
 
-**To run the unit & integration tests:**
+**To run the jest tests:**
 **NPM:**
 `npm run test`
 
 **Yarn:**
 `npm test`
 
-**To run the linter:**
+**To run the lint tests:**
 **NPM:**
 `npm run lint`
 
 Yarn:
 `yarn lint`
-
-**To run the automation tests:**
-**NPM:**
-`npm run automation`
-
-**Yarn:**
-`yarn automation`
 
 ## Built With
 
@@ -141,6 +134,8 @@ I would have utilised more utility classes and organise my CSS a bit better.
 It would be useful to have a Utility Class file with a readme and description of what is available, the naming system etc. These are always useful when developing with CSS using BEM. Things like setting specific margins, setting the display to flex etc. are repeated a lot in all the codebases I've seen.
 
 I would have loved to have done the same with the CSS variables, esp in tokenising them similar to what I've seen in design systems at work & at other companies with a mature design system. Organising the [8pt spacing system](https://medium.com/swlh/the-comprehensive-8pt-grid-guide-aa16ff402179) into css variables like var(--space-2xl) = 32px for example.. would have made it easier to make a nice visually conforming website
+
+**Security:**
 
 ## Acknowledgements
 
