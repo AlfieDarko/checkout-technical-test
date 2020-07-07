@@ -90,7 +90,7 @@ I'm 100% aware of the security implication of unauthenticated endpoints from She
 **No Redux or MobX??**
 Since this is a small project, I felt it was a bit overkill to bring in an outside package when React has all the tools to manage application state on the small scale.
 
-I felt it was perfectly appropriate to use the [React Context pattern of state management](https://medium.com/swlh/the-comprehensive-8pt-grid-guide-aa16ff402179) & it was pleasant to use!
+I felt it was perfectly appropriate to use the [React Context pattern of state management](https://kentcdodds.com/blog/how-to-use-react-context-effectively/) & it was pleasant to use!
 
 At a previous time I would have reached for the state management tools most react developers are comfortable with ie. Redux but I'm taking the pragmatic approach and only using what is necessary for the task at hand!
 
@@ -105,13 +105,15 @@ I would have used [ReCharts](http://recharts.org/en-US/) based on React & D3. I 
 **Testing**
 I would have loved to do more testing. Especially more integration and end-to-end with Cypress. I was quite pressed for time so I done what I can on this side of things.
 
+Perhaps even bring in Storybook for any reusable components I have like Buttons, Form Inputs and infoMessages. That could be overkill for this small task but it gives developers an opportunity to display a reusable component in its use context, visually.
+
 **Star Selection as a rating input**
-I felt it would have been way more visually appealing than my current implementation & would have been something to implement had I more time.
+I felt it would have been way more visually appealing than my current implementation of inputting the value & would have been something I would have implemented had I more time.
 I quite like the one from [uber's design system base web](https://baseweb.design/components/rating/) (link).
 As someone who enjoys component library work, this would have been fun to work on!
 
 **Data endpoints**
-Would have probably thought about moving away from using sheety.co if I weren't pressed for time (dont judge me 😂) to an express & mongo (or even some google cloud functions or lambda's for quick iterations)
+Would have probably thought about moving away from using sheety.co if I weren't pressed for time (dont judge me 😂) to an express & mongo (or even some google cloud functions or lambda's for quick iterations).
 
 **Performance Enhancements**
 Lazy Loading only load the comments when in screen.
@@ -123,6 +125,11 @@ Currently all the items are called from the API which is definitely not the most
 
 This would have been enjoyable to implement, I'd probably do it in my own time to play around with how I can improve the experience by buffering the results.
 
+**Skeleton Loading:**
+Would have been awesome to have some skeleton loading in the beginning so I could create an effect of a seamless loading experience.
+
+I could have the images transition in from a blue or just a skeleton bg and have the same with the reviews below.
+
 **CSS Animations & Interactions**
 
 -Definitely felt I could have done more on this front to add a more interactive user experience & also to have fun playing around with CSS animations & user interaction knowledge
@@ -133,9 +140,14 @@ More Utility Classes, More CSS Variables, CSS @Imports,
 I would have utilised more utility classes and organise my CSS a bit better.  
 It would be useful to have a Utility Class file with a readme and description of what is available, the naming system etc. These are always useful when developing with CSS using BEM. Things like setting specific margins, setting the display to flex etc. are repeated a lot in all the codebases I've seen.
 
-I would have loved to have done the same with the CSS variables, esp in tokenising them similar to what I've seen in design systems at work & at other companies with a mature design system. Organising the [8pt spacing system](https://medium.com/swlh/the-comprehensive-8pt-grid-guide-aa16ff402179) into css variables like var(--space-2xl) = 32px for example.. would have made it easier to make a nice visually conforming website
+I would have loved to have done the same with the CSS variables, esp in tokenising them similar to what I've seen in design systems at work & at other companies with a mature design system.
+Organising the [8pt spacing system](https://medium.com/swlh/the-comprehensive-8pt-grid-guide-aa16ff402179) into css variables like var(--space-2xl) = 32px for example.. Would have made it easier to make a nice visually conforming website.
 
-**Security:**
+It would also be easy for more junior deevlopers to jump in the codebase and feel at ease about making spacing changes as there is a TSHIRT sizing structure to adhere to in terms of spacing, font sizes etc.
+
+**Commit Hooks:**
+I could have added some commit hook scripts to lint and run tests on each commit in order to force people to commit working code only. I like that it enforces a code standard and only commiting working code throughout the team.
+I've seen implementing this reduce the more obvious bugs
 
 ## Acknowledgements
 
