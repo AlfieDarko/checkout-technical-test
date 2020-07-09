@@ -8,6 +8,12 @@ Checkout.com Frontend Technical Test
 
 The task was to build a simple page where you can post a comment and view the comments posted.
 
+## Pen & Paper Super Rough Wireframe
+
+| <a href="https://ibb.co/WkyLRxn">Screen 1</a> |
+<a href="https://ibb.co/jZNWmj1">Screen 2</a> |
+<a href="https://ibb.co/K62KSGg">Screen 3</a> |
+
 ## Screenshots
 
 | <a href="https://ibb.co/hyy3Rx2">Desktop Screen</a> |
