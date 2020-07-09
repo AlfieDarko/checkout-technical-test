@@ -1,4 +1,4 @@
-import React, { suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { AppProvider } from "../context/app-provider";
 import { FormContainer } from "../views/postFeedback";
@@ -34,18 +34,16 @@ const AverageRatingAndFeedbackWrapper = ({ children }) => {
 const App = () => {
   return (
     <AppProvider>
-      <div>
-        <NavBar />
-        <ProductAndFormWrapper>
-          <ImageCard />
-          <FormContainer />
-        </ProductAndFormWrapper>
-        <DripSection />
-        <AverageRatingAndFeedbackWrapper>
-          <AverageRatingContainer />
-          <ListContainer />
-        </AverageRatingAndFeedbackWrapper>
-      </div>
+      <NavBar />
+      <ProductAndFormWrapper>
+        <ImageCard />
+        <FormContainer />
+      </ProductAndFormWrapper>
+      <DripSection />
+      <AverageRatingAndFeedbackWrapper>
+        <AverageRatingContainer />
+        <ListContainer />
+      </AverageRatingAndFeedbackWrapper>
     </AppProvider>
   );
 };

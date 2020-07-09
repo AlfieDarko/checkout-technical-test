@@ -6,16 +6,16 @@
   &__value {
     color: black;
     font-size: 64px;
-    background: #ffd601;
+    background: var(--col-cheesy-yellow);
     width: fit-content;
     margin: 0 auto;
     border-radius: 100%;
-    padding: 16px;
+    padding: var(--spacing-xs);
   }
 
   &__text {
     color: #fed601;
     text-align: center;
-    margin: 8px;
+    margin: var(--spacing-xxs);
   }
 }

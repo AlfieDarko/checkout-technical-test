@@ -1,16 +1,16 @@
 .feedback-form {
   &__container {
     width: 80%;
-    padding: 32px;
+    padding: var(--spacing-m);
     border-radius: 20px;
-    background: var(--col-offdark-form);
+    background: var(--col-bg-dark);
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.11);
     color: var(--col-offwhite);
 
     max-width: 80vw;
     margin: 0 6px;
     @media only screen and (min-width: 640px) {
-      margin: 32px;
+      margin: var(--spacing-m);
       max-width: inherit;
     }
   }

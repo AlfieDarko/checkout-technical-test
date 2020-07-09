@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 32px;
+    padding-left: var(--spacing-m);
   }
 
   &__name {
@@ -33,11 +33,11 @@
   }
 
   &__rating {
-    margin-right: 16px;
+    margin-right: var(--spacing-xs);
   }
 
   &__comment {
-    margin-top: 16px;
+    margin-top: var(--spacing-xs);
     width: 85%;
   }
 }

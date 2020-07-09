@@ -1,6 +1,6 @@
 .btn {
   width: 100%;
-  padding: 16px;
+  padding: var(--spacing-xs);
   background: #9e1946;
   border: none;
   color: white;

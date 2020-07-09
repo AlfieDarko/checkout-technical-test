@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   background: var(--col-cheesy-yellow);
-  padding-bottom: 128px;
+  padding-bottom: var(--spacing-xxxl);
 
   &__ul {
     display: inherit;
@@ -21,8 +21,7 @@
 
   &__anchor-tag {
     display: block;
-    padding: 16px;
-    color: var(--col-offdark);
+    padding: var(--spacing-xs);
     font-weight: 600;
 
     &:link {

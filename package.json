@@ -27,13 +27,6 @@
     "url": "https://github.com/AlfieDarko/checkout-technical-test/issues"
   },
   "jest": {
-    "setupFilesAfterEnv": [
-      "jest-enzyme"
-    ],
-    "setupFiles": [
-      "./src/setupTests.js"
-    ],
-    "testEnvironment": "enzyme",
     "moduleNameMapper": {
       "^#views(.*)$": "<rootDir>/src/views/$1",
       "^#assets(.*)$": "<rootDir>/src/views/assets/$1",
@@ -55,16 +48,12 @@
     "babel-loader": "8.1.0",
     "babel-plugin-module-resolver": "4.0.0",
     "clean-webpack-plugin": "3.0.0",
-    "copy-webpack-plugin": "6.0.3",
     "css-loader": "3.6.0",
     "cypress": "4.9.0",
-    "enzyme": "3.11.0",
-    "enzyme-adapter-react-16": "1.15.2",
     "eslint": "7.4.0",
     "eslint-plugin-jest": "23.18.0",
     "eslint-plugin-react": "7.20.3",
     "file-loader": "6.0.0",
-    "gh-pages": "3.1.0",
     "html-loader": "1.1.0",
     "html-webpack-plugin": "4.3.0",
     "identity-obj-proxy": "3.0.0",
@@ -75,6 +64,7 @@
     "jest-transform-stub": "2.0.0",
     "mini-css-extract-plugin": "0.9.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss-import": "12.0.1",
     "postcss-loader": "3.0.0",
     "postcss-nested": "4.2.1",
     "postcss-preset-env": "6.7.0",
@@ -84,8 +74,7 @@
     "url-loader": "4.1.0",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.12",
-    "webpack-dev-server": "3.11.0",
-    "webpack-merge": "4.2.2"
+    "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
     "@babel/runtime": "7.10.3",
@@ -94,7 +83,6 @@
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-hook-form": "5.7.2",
-    "recharts": "1.8.5"
+    "react-hook-form": "5.7.2"
   }
 }

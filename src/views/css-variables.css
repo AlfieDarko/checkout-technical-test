@@ -1,0 +1,20 @@
+:root {
+  --dark-navy-blue: #03256c;
+  --slushy-blue: #2541b2;
+  --default-text-color: #373e46;
+  --col-cheesy-yellow: #ffd601;
+  --col-bg-dark: #111011;
+  --col-offwhite: #f2f2f2;
+  --col-nav-anchor-hover: rgba(18, 18, 18, 0.05);
+
+  --spacing-xxxs: 4px;
+  --spacing-xxs: 8px;
+  --spacing-xs: 16px;
+  --spacing-s: 24px;
+  --spacing-m: 32px;
+  --spacing-l: 48px;
+  --spacing-xl: 64px;
+  --spacing-xxl: 96px;
+  --spacing-xxxl: 128px;
+  --spacing-xxxxl: 160px;
+}

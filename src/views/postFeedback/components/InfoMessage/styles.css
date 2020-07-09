@@ -1,6 +1,6 @@
 .info-message {
   &__span {
-    padding-top: 8px;
+    padding-top: var(--spacing-xxs);
     font-size: 16px;
 
     &--yellow {
