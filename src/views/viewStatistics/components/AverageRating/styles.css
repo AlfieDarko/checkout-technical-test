@@ -6,6 +6,7 @@
   &__value {
     color: black;
     font-size: 64px;
+    font-weight: 600;
     background: var(--col-cheesy-yellow);
     width: fit-content;
     margin: 0 auto;

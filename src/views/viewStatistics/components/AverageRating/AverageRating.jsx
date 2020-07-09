@@ -7,10 +7,10 @@ const renderReviewContent = (numberOfReviews, averageRating) => {
   return (
     <div data-testid="average-rating-review-content">
       <p className="average-rating__text">Average Rating of</p>
-      {/* change h2 to p */}
-      <h2 className="average-rating__value" data-testid="average-rating-count">
+
+      <p className="average-rating__value" data-testid="average-rating-count">
         {numberOfReviews && `${averageRating}`}
-      </h2>
+      </p>
 
       <p className="average-rating__text" data-testid="reviews-count">
         {`from ${numberOfReviews} reviews`}
@@ -22,10 +22,9 @@ const renderReviewContent = (numberOfReviews, averageRating) => {
 const renderZeroReviewContent = () => {
   return (
     <>
-      {/* change h2 to p */}
-      <h2 data-testid="average-rating-no-reviews-text">
+      <p data-testid="average-rating-no-reviews-text">
         There are no reviews at the moment
-      </h2>
+      </p>
     </>
   );
 };
