@@ -81,7 +81,7 @@ Yarn:
 - **Javascript**
 - **React**
 - [**PostCSS**](https://postcss.org/)
-- [**React-Form-Hooks**](https://react-hook-form.com/)
+- [**React-Hook-Forms**](https://react-hook-form.com/)
 - [**Jest**](https://jestjs.io/en/)
 - [**React Testing Library**](https://testing-library.com/)
 - [**Webpack**](https://webpack.js.org/)
@@ -98,73 +98,89 @@ I chose this over typescript as for the purposes of a technical test, alongside 
 
 Since the job role advertised is for react based frontend development, I found it fitting to use React rather than vanilla JS for this technical test.
 
+Since the page is mostly static, there's definitely the argument that I could have used Next.js to get up & running too.
+
 ### **PostCSS**
 
-Most may have reached for SASS but I felt I wanted to be pragmatic and only bring in what I needed. SASS has useful tools like CSS imports, mixins and their own style of CSS variables off the bat but I only really would use the nested CSS syntax.
+While SASS is more popular as the swiss army knife of CSS, I wanted to be pragmatic about what I needed.
 
-I like PostCSS for the fact that it starts bare bones and then you can just bring in the parts that you actually need.
-If this were a bigger more complicated project, I would have thought about SASS & Styled Components especially, which I really enjoy working on and would have really aided the component based development approach.
+SASS has some powerful features that come with it like mixins & their own style of CSS variables.
+When I scoped the task, I saw that I only really needed few features I found useful like nesting.
 
-In the end, I mostly took the hammer for the nail approach with the technology choices .
+Standard CSS Variables are now well supported (with polyfills to ie9 if the declarations are in :root)
+It also allows me to start basic and bring in the bits I need.
+
+If this were a slightly or bigger more complicated project, I definitely would have thought about Styled Components especially as it's really enjoyable to work with, easy for more junior team members to pick up and jump into as the styles are compartmentalised and no BEM knowledge is required (making abit CSS less scary).
+
+In the end, I mostly took the hammer for the nail approach with the technology choices given the small size of the task & the simplicity of the codebase and components required.
 
 ### **React Testing Library**
 
-I've always been interested in giving it a spin and enjoy a lot of Kent C Dodds content about testing so I thought let me give this a try for this project.
-Due to the limited time I had, I wasn't able to use this to its full extent but the experience was positive.
-There are some interesting differences between this and enzyme for example which would be great to discuss.
+I've always been interested in giving it a spin and enjoy a lot of Kent C Dodds content about testing so I thought let me give this a try for the first time in this project.
+
+Due to the limited time I had, I wasn't able to use this to its full extent but the experience was positive & I really liked that they encouraged testing from the viewpoint of the user.
+
+Its good that they encouraged using data attributes for testing rather than CSS classes or ID's which is something more teams should pick up. using CSS Class Names and ID's just to select components to test can change for innocent reasons making for quite brittle testing.
+
+There were some issues testing things where I would have been able to test things easily w/ enzyme but I put that down to teething pains of using new technology. Hence some missing tests.
 
 ### **Sheety.co**
 
 Google sheets to Rest API.
 I mostly use this for rapid prototyping when I don't have the leisure of time to spin up a backend & database.
-There was a case to use Firebase instead as there are the web security issues that come with using something like Sheety but given this is a technical test for a frontend role, I felt that it was appropriate to use this as long as the position is explained.
+(Another great tool for setting up prototype REST APIs > [https://github.com/typicode/json-server](https://github.com/typicode/json-server) )
 
-I'm 100% aware of the security implication of unauthenticated endpoints from Sheety will raise flags in production development but for a technical test & the issues acknowledged with the time constraints, the tradeoff was worth it.
+There was a case to use Firebase instead as there are the obvious web security issues that come with using something like Sheety but given this is a technical test for a frontend role, I felt that it was appropriate to use this as long as the position is explained.
+
+I'm definitely 100% aware of the security implication of unauthenticated endpoints from Sheety will raise flags in production development but for a technical test & the issues acknowledged, also with the time constraints I had on this, the tradeoff was necessary.
 
 ### **React Form Hooks**
 
-I've used React Form Hooks to handle the form validation and workings. I felt the API was simpler than something like Formik & it was capable of handling a small form for this tech test.
+I've used React Form Hooks to handle the form validation and workings. I felt the API was nice and simple & I have used it previously with great effect.
+I considerered the other options and looked quite extensively at [Formik](https://www.formik.org) which was quite advanced in its toolset but for a simple technical task, I felt React Form Hooks was more than capable of handling what I scoped out.
 
 ### **No Redux or MobX??**
 
-Since this is a small project, I felt it was a bit overkill to bring in an outside package when React has all the tools to manage application state on the small scale.
+I felt it was overkill to bring in an outside package for state management given the small size of the task.
+This gave me the perfect opportunity to finally try out the [React Context & hooks pattern of state management](https://kentcdodds.com/blog/how-to-use-react-context-effectively/) & it was pleasant to use!
 
-I felt it was perfectly appropriate to use the [React Context pattern of state management](https://kentcdodds.com/blog/how-to-use-react-context-effectively/) & it was pleasant to use!
+There are some questions about how it would scale if this app was to be expanded on a larger scale but given it uses much of the same paradigms such as reducers, actions etc. deprecating it for the standard Redux work flow would be a low effort task.
 
-At a previous time I would have reached for the state management tools most react developers are comfortable with ie. Redux but I'm taking the pragmatic approach and only using what is necessary for the task at hand!
+MobX may have been an alternative but for a small project, the gains of bringing in a package to manage quite simple app state would be quite negligable.
 
 ## If I Had More Time
 
 There are a few things I wasn't able to complete due to time constraints and balancing my time between other tech-tests and interviews. I've written up about them below.
 
-###**ReCharts**
+### **ReCharts**
+
 I would have been able to implement the chart part of the site, tallying the ratings from 1-5 stars.
 I would have used [ReCharts](http://recharts.org/en-US/) based on React & D3. I quite like its customisable API & I've used it before for more simpler charts.
 
 ### **Testing**
 
-I would have loved to do more testing. Especially more integration and end-to-end with Cypress. I was quite pressed for time so I done what I can on this side of things.
+I would have loved to do more testing. Especially more integration and end-to-end with Cypress. I was quite pressed for time so I done what I could given my constraints.
 
-Perhaps even bring in Storybook for any reusable components I have like Buttons, Form Inputs and infoMessages. That could be overkill for this small task but it gives developers an opportunity to display a reusable component in its use context, visually.
+Getting to grips with using React Testing Library for the first time meant I didn't have enough time to tackle their way of testing some scenarios
 
 ### **Star Selection as a rating input**
 
 I felt it would have been way more visually appealing than my current implementation of inputting the value & would have been something I would have implemented had I more time.
 I quite like the one from [uber's design system base web](https://baseweb.design/components/rating/) (link).
-As someone who enjoys component library work, this would have been fun to work on!
 
 ### **Data endpoints**
 
-Would have probably thought about moving away from using sheety.co if I weren't pressed for time (dont judge me 😂) to an express & mongo (or even some google cloud functions or lambda's for quick iterations).
+I would have thought about moving away from sheety.co as an endpoint for the data requests and gone with some simple serverless functions.
 
 ### **Performance Enhancements**
 
-Lazy Loading only load the comments when in screen.
-Perhaps think about a load or see comments button instead of instantly displaying them.
+One thing I would have liked to implement was Lazy Loading comments as they appear on the screen via an infinite scroll solution.
+I could have given much more thought about scenarios where the comments are very numerous and all the images that would have to load for all those Feedback Card components. Definitely not the most performant thing I could have done.
 
-I would have thought about utilizing data pagination from the endpoint to either allow the user to click a button and see more reviews, or just have an infinite scroll that loads the next ten or so more as we scroll down.
+Perhaps I could have gone with 10 comments on the initial call (or none at all) & have gone with a button that says see more reviews.
+Every click could have loaded 10 more, saving user bandwith by reducing unneeded large request payloads
 
-Currently all the items are called from the API which is definitely not the most performant when it comes to the user's perspective.
+I could have also thought about utilizing data pagination from the endpoint to either allow the user to click a a next page button to see more reviews.
 
 This would have been enjoyable to implement, I'd probably do it in my own time to play around with how I can improve the experience by buffering the results.
 
