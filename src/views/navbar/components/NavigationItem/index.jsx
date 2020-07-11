@@ -11,7 +11,7 @@ const NavigationItem = ({
   isNoReferrer,
 }) => {
   return (
-    <li className="navigation-item__li">
+    <li className="navigation-item__li" tabIndex="0">
       <a
         className="navigation-item__anchor-tag"
         href={href}
