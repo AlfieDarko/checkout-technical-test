@@ -7,29 +7,12 @@ import { DripSection } from "#views/viewStatistics";
 import { NavBar } from "#views/navbar";
 import { ImageCard } from "./pizzaSection";
 import { AverageRatingContainer } from "./viewStatistics/components/AverageRating";
+import {
+  ProductAndFormWrapper,
+  AverageRatingAndFeedbackWrapper,
+} from "./wrappers";
+
 import "./app.css";
-
-const ProductAndFormWrapper = ({ children }) => {
-  return (
-    <div className="layout-container yellow-bg">
-      <div className="row-container max-width-1000 margin-0-auto">
-        {children}
-      </div>
-    </div>
-  );
-};
-
-const AverageRatingAndFeedbackWrapper = ({ children }) => {
-  return (
-    <section
-      id="comments"
-      tabIndex="0"
-      className="list-feedback max-width-1000 margin-0-auto margin-top-300px"
-    >
-      {children}
-    </section>
-  );
-};
 
 const App = () => {
   return (
